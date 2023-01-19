@@ -5,7 +5,7 @@
 <!--    </div>-->
 
     <div class="hero_video filter">
-      <Video :vid_src="video.url" :vid_poster="video.poster"/>
+      <Video :vid_src="video.url" :vid_poster="video.poster" autoplay loop/>
     </div>
 
     <div class="hero_title">
@@ -23,7 +23,7 @@ import Header from "@/components/organisms/Header/Header";
 import Image from "@/components/atoms/Image/Image";
 import heroBg from '@/assest/images/man.jpg'
 import HeroTitle from "@/components/molecules/HeroTitle/HeroTitle";
-import videoDemo from '@/assest/video/demo.mp4'
+import videoDemo from '@/assest/video/video.mp4'
 import Video from "@/components/atoms/Video/Video";
 
 export default {
@@ -73,7 +73,7 @@ export default {
   .hero_title {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 30%;
     transform: translate(-50%,-50%);
     z-index: 3;
   }
