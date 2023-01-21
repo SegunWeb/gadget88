@@ -5,12 +5,12 @@
 <!--    </div>-->
 
     <div class="hero_video filter">
-      <Video :vid_src="video.url" :vid_poster="video.poster" autoplay loop/>
+      <Video :vid_src="video.url" :vid_poster="video.poster" autoplay loop />
     </div>
 
-    <div class="hero_title">
-      <HeroTitle>Gadget 88</HeroTitle>
-    </div>
+<!--    <div class="hero_title">-->
+<!--      <HeroTitle>Gadget 88</HeroTitle>-->
+<!--    </div>-->
   </div>
 
 </template>
@@ -23,7 +23,7 @@ import Header from "@/components/organisms/Header/Header";
 import Image from "@/components/atoms/Image/Image";
 import heroBg from '@/assest/images/man.jpg'
 import HeroTitle from "@/components/molecules/HeroTitle/HeroTitle";
-import videoDemo from '@/assest/video/video.mp4'
+import videoDemo from '@/assest/video/video2.mp4'
 import Video from "@/components/atoms/Video/Video";
 
 export default {
@@ -68,6 +68,7 @@ export default {
     width: 100vw;
     position: relative;
     z-index: 1;
+    margin: -5% auto 0 auto;
   }
 
   .hero_title {
@@ -77,4 +78,11 @@ export default {
     transform: translate(-50%,-50%);
     z-index: 3;
   }
+
+  @media screen and (max-width: 1024px) {
+    .hero_video {
+      margin-top: 0;
+    }
+  }
+
 </style>

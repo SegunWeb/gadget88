@@ -1,10 +1,16 @@
 <template>
   <header class="header">
-    <div class="header_container">
+    <div class="header_container content_wrapper">
       <Logo class="logo"/>
+
       <nav class="nav_list">
         <a v-for="url in urls" :href="'#'+ url.id" class="anchor">{{url.name}}</a>
       </nav>
+
+      <div class="mobile_menu" >
+        <MobileMenu />
+      </div>
+
     </div>
   </header>
 </template>
@@ -12,10 +18,11 @@
 <script>
 
 import Logo from "@/components/molecules/Logo/Logo";
+import MobileMenu from "@/components/molecules/MobileMenu/MobileMenu";
 
 export default {
   name: "Header",
-  components: {Logo},
+  components: {MobileMenu, Logo},
   data() {
     return {
       urls: [
@@ -60,19 +67,24 @@ export default {
   .anchor:hover {
     opacity: .7;
   }
+  .mobile_menu {
+    display: none;
+
+  }
 
   @media screen and (max-width: 1024px) {
     .logo {
-      width: 150px;
+      width: 250px;
       display: flex;
     }
   }
   @media screen and (max-width: 768px) {
     .header_container {
-      flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
+      flex-direction: row-reverse;
     }
     .logo {
+      padding-top: 7px;
       width: 200px;
     }
     .nav_list {
@@ -82,19 +94,18 @@ export default {
     }
     .anchor {
       margin-left: 0;
+    }
+    .nav_list {
+      display: none;
+    }
+    .mobile_menu {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
 
     }
+
   }
-  @media screen and (max-width: 568px) {
-    .nav_list {
-      width: 100%;
-    }
-    .logo {
-      width: 120px;
-    }
-    .anchor {
-      font-size: 12px;
-    }
-  }
+
 
 </style>

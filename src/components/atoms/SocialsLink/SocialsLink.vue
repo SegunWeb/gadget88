@@ -22,13 +22,17 @@ export default {
 .social {
   text-decoration: none;
 }
+.icon {
+  color: #ffffff;
+  font-size: 25px;
+}
+
 .social:hover {
   opacity: .6;
 }
 .social_icon {
   text-align: center;
-  border-radius: 3px;
-  background-color: #fff;
+
   display: flex;
   align-items: center;
   justify-content: center;

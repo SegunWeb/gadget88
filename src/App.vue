@@ -37,12 +37,14 @@ export default {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-   font-size: 20px;
-   color: #000;
    position: relative;
  }
  .g_wrapper {
    padding: 80px 20px;
+ }
+ .content_wrapper {
+   max-width: 1920px;
+   margin: 0 auto;
  }
  .g_title {
    margin: 0 auto 40px auto;
