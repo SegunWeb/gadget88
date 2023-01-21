@@ -68,7 +68,7 @@ export default {
     width: 100vw;
     position: relative;
     z-index: 1;
-    margin: -5% auto 0 auto;
+    margin: 0 auto;
   }
 
   .hero_title {
@@ -81,8 +81,9 @@ export default {
 
   @media screen and (max-width: 1024px) {
     .hero_video {
-      margin-top: 0;
+      margin-top: 62px;
     }
   }
+
 
 </style>

@@ -44,6 +44,9 @@ export default {
     z-index: 999;
     width: 100%;
     margin: 0 auto;
+    position: absolute;
+    left: 0;
+    top: 0;
   }
   .header_container {
     padding: 0 25px;
