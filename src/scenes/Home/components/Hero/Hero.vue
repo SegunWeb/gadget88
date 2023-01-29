@@ -8,9 +8,12 @@
       <Video :vid_src="video.url" :vid_poster="video.poster" autoplay loop />
     </div>
 
-<!--    <div class="hero_title">-->
-<!--      <HeroTitle>Gadget 88</HeroTitle>-->
-<!--    </div>-->
+    <div class="hero_title">
+      <HeroTitle class="title">
+        Introducing the new innovative product
+        <p class="product">GADGET 88</p>
+      </HeroTitle>
+    </div>
   </div>
 
 </template>
@@ -46,6 +49,10 @@ export default {
 </script>
 
 <style scoped>
+.product {
+  text-align: center;
+  margin-top: 12px;
+}
   .hero {
     overflow: hidden;
   }
@@ -74,14 +81,28 @@ export default {
   .hero_title {
     position: absolute;
     left: 50%;
-    top: 30%;
+    top: 38%;
     transform: translate(-50%,-50%);
     z-index: 3;
+    text-align: center;
   }
 
   @media screen and (max-width: 1024px) {
     .hero_video {
       margin-top: 62px;
+    }
+    .hero_title {
+      width: 75%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .hero_title {
+      top: 50%;
+    }
+    .title {
+      font-size: 16px;
+
     }
   }
 
