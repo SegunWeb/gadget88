@@ -33,12 +33,25 @@ export default {
 
 
 <style>
- * {
+
+
+@font-face {
+  font-family: "FontRegular";
+  src: local("FontRegular"),
+  url(./assest/fonts/sf-pro-text_regular.woff2) format("truetype");
+}
+
+
+* {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
    position: relative;
+  font-family: "FontRegular";
  }
+
+
+
  .g_wrapper {
    padding: 80px 20px;
  }

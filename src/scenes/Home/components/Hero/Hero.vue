@@ -1,27 +1,17 @@
 <template>
   <div class="hero">
-<!--    <div class="hero_img">-->
-<!--      <Image :pic_alt="img.alt" :pic_src="img.url"/>-->
-<!--    </div>-->
-
-    <div class="hero_video filter">
-      <Video :vid_src="video.url" :vid_poster="video.poster" autoplay loop />
-    </div>
-
-    <div class="hero_title">
-      <HeroTitle class="title">
-        Introducing the new innovative product
-        <p class="product">GADGET 88</p>
-      </HeroTitle>
-    </div>
+      <div>
+        <h1 class="hero_title">
+          Introducing the new innovative product
+          <br>
+          <span class="product">GADGET 88</span>
+        </h1>
+        <a href="#about" class="rainbow">Watch the announcement</a>
+      </div>
   </div>
-
 </template>
 
 <script>
-
-
-
 import Header from "@/components/organisms/Header/Header";
 import Image from "@/components/atoms/Image/Image";
 import heroBg from '@/assest/images/man.jpg'
@@ -31,7 +21,7 @@ import Video from "@/components/atoms/Video/Video";
 
 export default {
   name: "Hero",
-  components: {Video, HeroTitle, Image, Header},
+  components: {HeroTitle, Image, Header},
 
   data() {
     return {
@@ -49,60 +39,50 @@ export default {
 </script>
 
 <style scoped>
-.product {
+.rainbow {
+  display: block;
+  margin: 24px auto;
+  background: none;
+  text-decoration: inherit;
+  padding: 12px 24px;
+  width: 280px;
+  border-radius: 100px;
+  border: 3px solid transparent;
+  border-image-slice: 1;
+  border-width: 3px;
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  color: #fff;
   text-align: center;
-  margin-top: 12px;
 }
+.rainbow:hover {
+  opacity: .8;
+}
+
+
+
   .hero {
     overflow: hidden;
-  }
-  .hero_img {
-    position: relative;
-    z-index: 1;
-  }
-  .filter:before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    background-color: rgba(0,0,0, .7);
+    background: #000;
+    height: 100vh;
     width: 100%;
-    height: 100%;
-    z-index: 2;
-  }
-  .hero_video {
-    width: 100vw;
     position: relative;
-    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero_title {
+    color: #fff;
+    text-align: center;
     margin: 0 auto;
   }
 
-  .hero_title {
-    position: absolute;
-    left: 50%;
-    top: 38%;
-    transform: translate(-50%,-50%);
-    z-index: 3;
-    text-align: center;
-  }
-
-  @media screen and (max-width: 1024px) {
-    .hero_video {
-      margin-top: 62px;
-    }
-    .hero_title {
-      width: 75%;
-    }
-  }
-
   @media screen and (max-width: 768px) {
-    .hero_title {
-      top: 50%;
+    .hero {
+      height: 60vh;
     }
+
     .title {
       font-size: 16px;
-
     }
   }
 
