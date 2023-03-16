@@ -2,17 +2,17 @@
   <div class="article">
     <div>
       <div class="logo">
-        <Image :pic_alt="img.pic_alt" :pic_src="img.pic_url"/>
+        <Image :pic_alt="title" :pic_src="logo"/>
       </div>
         <p class="title">
-          {{content.title}}
+          {{title}}
         </p>
         <p class="description">
-          {{content.description}}
+          {{description}}
         </p>
     </div>
     <div>
-      <LinkBtn :href="content.link" class="link">
+      <LinkBtn :href="link" class="link">
         More
       </LinkBtn>
     </div>
@@ -29,21 +29,12 @@ import LinkBtn from "@/components/atoms/LinkBtn/LinkBtn";
 export default {
   name: "ArticleBox",
   components: {LinkBtn, Image},
-
-  data() {
-    return {
-      img: {
-        pic_alt: 'logo',
-        pic_url: Demo
-      },
-      content: {
-        link: 'https://www.harpersbazaar.rs/public/moda/modna-fotografija/anastasiia-bondarchuk-party-time-digital-cover',
-        title: 'Anastasiia Bondarchuk: Party time',
-        description: 'Jednu od decembarskih digitalnih naslovnica krasi devojka čija manekenksa karijera joj je omogućila da radi sa najvećim svetskim brendovima ali ju je plasirala i na bioskopsko platno. Upoznajte večičanstvenu Anastasiiu.',
-      }
-
-    }
-  }
+  props: {
+    title: String,
+    description: String,
+    logo: String,
+    link: String,
+  },
 }
 </script>
 
@@ -69,6 +60,8 @@ export default {
   display: block;
   width: 150px;
   margin: 0 auto;
+  max-height: 56px;
+  height: 100%;
 }
 .title {
   margin: 20px auto 10px auto;

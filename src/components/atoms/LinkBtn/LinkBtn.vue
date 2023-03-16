@@ -1,5 +1,5 @@
 <template>
-  <a class="btn_link" target="_blank" :href="href">
+  <a class="btn_link" target="_blank" :href="link">
     <slot></slot>
   </a>
 </template>
@@ -9,6 +9,11 @@ export default {
   name: "LinkBtn",
   props: {
     href: String
+  },
+  data() {
+    return {
+      link: '/'
+    }
   }
 }
 </script>

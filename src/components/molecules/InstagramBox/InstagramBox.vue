@@ -1,33 +1,69 @@
 <template>
     <div class="img">
-      <a href="/">
-        <Image :pic_alt="img.pic_alt" :pic_src="img.pic_url"/>
+      <a class="img_link" :href="href">
+        <Image :pic_alt="pic_alt" :pic_src="pic_src"/>
       </a>
     </div>
 </template>
 
 <script>
 import Image from "@/components/atoms/Image/Image";
-import Demo from "@/assest/images/demo-inst.jpg";
+
+
 export default {
   name: "InstagramBox",
   components: {Image},
-
-  data() {
-    return {
-      img: {
-        pic_alt: 'picture',
-        pic_url: Demo
-      },
-    }
-  }
+  props: {
+    pic_alt: String,
+    pic_src: String,
+    href: String,
+  },
 }
+
 </script>
 
 <style scoped>
 .img {
   cursor: pointer;
-  max-width: 245px;
-  width: 100%;
+  max-width: 255px;
+  width: 25vw;
+  max-height: 255px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+.img:hover > a {
+  transition: .4s;
+  transform: scale(1.1);
+}
+.img_link {
+  display: block;
+  transition: .4s;
+  min-width: 365px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .img {
+    width: 28vw;
+  }
+  .img_link {
+     min-width: 235px; 
+  }
+  .img {
+    max-height: 165px;
+  }
+}
+@media screen and (max-width: 568px) {
+  .img_link {
+     min-width: 190px; 
+  }
+  .img {
+    max-height: 105px;
+  }
+}
+
+
+
 </style>

@@ -3,12 +3,7 @@
     <HeroTitle class="g_title">Instagram</HeroTitle>
 
     <div class="items">
-      <InstagramBox/>
-      <InstagramBox/>
-      <InstagramBox/>
-      <InstagramBox/>
-      <InstagramBox/>
-      <InstagramBox/>
+      <InstagramBox :href="link"  :pic_alt="picture" :pic_src="el.pic_url" v-for="el in img" key="el.img"/>
     </div>
   </div>
 </template>
@@ -18,9 +13,41 @@
 import HeroTitle from "@/components/molecules/HeroTitle/HeroTitle";
 import InstagramBox from "@/components/molecules/InstagramBox/InstagramBox";
 
+import one from "@/assest/images/insta/1.jpg";
+import two from "@/assest/images/insta/2.jpg";
+import three from "@/assest/images/insta/3.jpg";
+import four from "@/assest/images/insta/4.jpg";
+import five from "@/assest/images/insta/5.png";
+import six from "@/assest/images/insta/6.jpg";
+import seven from "@/assest/images/insta/7.jpg";
+import eight from "@/assest/images/insta/8.jpg";
+import nine from "@/assest/images/insta/9.jpg";
+import ten from "@/assest/images/insta/10.jpg";
+import eleven from "@/assest/images/insta/11.jpg";
+// import oneMovie from "@/assest/images/insta/1.mov";
+
 export default {
   name: "Instagram",
-  components: {InstagramBox, HeroTitle}
+  components: {InstagramBox, HeroTitle},
+
+  data() {
+    return {
+      img: [
+        {pic_url: one}, 
+        {pic_url: two}, 
+        {pic_url: three}, 
+        {pic_url: four}, 
+        {pic_url: five}, 
+        {pic_url: six}, 
+        {pic_url: seven}, 
+        {pic_url: eight}, 
+        {pic_url: nine}, 
+        {pic_url: ten}, 
+        {pic_url: eleven}, 
+      ],
+      link: '/'
+    }
+  }
 }
 </script>
 
@@ -31,7 +58,7 @@ export default {
 }
 .items {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   max-width: 1024px;
   width: 100%;
@@ -39,11 +66,11 @@ export default {
 }
 
 .items > div {
-  margin: 0 auto 10px auto;
+  margin: 5px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
   .items > div {
-
+    margin: 2px;
   }
 }
 
