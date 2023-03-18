@@ -16,7 +16,7 @@ export default {
     return {
       socials: [
         {id: 1, name: 'youtube', link: 'https://youtube.com/@gadget_88', icon: ['fab', 'youtube']},
-        {id: 2, name: 'instagram', link: 'https://instagram.com/gadget88_official_?igshid=YmMyMTA2M2Y=', icon: ['fab', 'instagram']},
+        {id: 2, name: 'instagram', link: 'https://www.instagram.com/gadget88.official/?igshid=YmMyMTA2M2Y%3D', icon: ['fab', 'instagram']},
         {id: 3, name: 'twitter', link: 'https://twitter.com/Gadget_88_?t=92EfEaa0D3QfCvEV2aK-eQ&s=35', icon: ['fab', 'twitter']},
       ]
     }

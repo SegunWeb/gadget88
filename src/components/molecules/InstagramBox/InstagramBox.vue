@@ -35,27 +35,18 @@ export default {
 }
 .img:hover > a {
   transition: .4s;
-  transform: scale(1.6);
+  transform: scale(1.1);
 }
 .img_link {
   display: block;
   transition: .4s;
-  transform: scale(1.5);
+  
 }
 
 
 @media screen and (max-width: 768px) {
   .img {
     width: 28vw;
-  }
-  .img {
-    max-height: 165px;
-  }
-}
-@media screen and (max-width: 568px) {
- 
-  .img {
-    max-height: 105px;
   }
 }
 

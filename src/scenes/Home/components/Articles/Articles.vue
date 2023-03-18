@@ -21,9 +21,21 @@ export default {
     return {
       articleData: [
         {
-          title: 'Gadget 88. Innovative Product of 2023', 
-          desc: 'Do you know what vibrations are? Vibrations are the energy with which we interact with the world.', 
-          logo: 'https://super-news.info/wp-content/uploads/2021/02/super-newslogo-1.png', 
+          title: "Who's That Girl: Anastasiia Bondarchuk", 
+          desc: 'Despite her young age, Anastasiia Bondarchuk has an impressive number of works, she became a guest on the red carpet of the Cannes Film Festival with the film «The Incident at Wall Street Hotel»...', 
+          logo: 'https://forbes.kz/images/logo.svg', 
+          link: 'https://forbes.kz//life/style/whos_that_girl_anastasiia_bondarchuk?'
+        },
+        {
+          title: 'Anastasiia Bondarchuk: Party time', 
+          desc: 'Jednu od decembarskih digitalnih naslovnica krasi devojka čija manekenksa karijera joj je omogućila da radi sa najvećim svetskim brendovima ali ju je plasirala i na bioskopsko platno. Upoznajte večičanstvenu Anastasiiu.', 
+          logo: 'https://www.harpersbazaar.rs/public/images/logo.png', 
+          link: 'https://www.harpersbazaar.rs/public/moda/modna-fotografija/anastasiia-bondarchuk-party-time-digital-cover'
+        },
+        {
+          title: 'GADGET 88. GAME-CHANGER OF 2023', 
+          desc: 'Every living being has its own vibration frequency. It influences how all of us communicate with what surrounds us. Sometimes these pulses may not coincide...', 
+          logo: 'https://fostylen.com/wp-content/uploads/2020/08/logo_fostylen_gold_187.png', 
           link: 'https://fostylen.com/en/technologies/gadget-88-game-changer-2023/'
         },
         {

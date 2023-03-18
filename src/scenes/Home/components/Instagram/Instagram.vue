@@ -17,14 +17,15 @@ import one from "@/assest/images/insta/1.jpg";
 import two from "@/assest/images/insta/2.jpg";
 import three from "@/assest/images/insta/3.jpg";
 import four from "@/assest/images/insta/4.jpg";
-import five from "@/assest/images/insta/5.png";
+import five from "@/assest/images/insta/5.jpg";
 import six from "@/assest/images/insta/6.jpg";
 import seven from "@/assest/images/insta/7.jpg";
 import eight from "@/assest/images/insta/8.jpg";
 import nine from "@/assest/images/insta/9.jpg";
 import ten from "@/assest/images/insta/10.jpg";
 import eleven from "@/assest/images/insta/11.jpg";
-// import oneMovie from "@/assest/images/insta/1.mov";
+import twelve from "@/assest/images/insta/12.jpg";
+
 
 export default {
   name: "Instagram",
@@ -44,8 +45,9 @@ export default {
         {pic_url: nine}, 
         {pic_url: ten}, 
         {pic_url: eleven}, 
+        {pic_url: twelve}, 
       ],
-      link: '/'
+      link: 'https://www.instagram.com/gadget88.official/?igshid=YmMyMTA2M2Y%3D'
     }
   }
 }
